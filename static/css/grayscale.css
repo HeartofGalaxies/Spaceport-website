@@ -74,7 +74,7 @@
     color: #4F94CD;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #2886B4;
   }
   #mainNav.navbar-shrink .nav-link.active {
     color: #4F94CD;
@@ -149,16 +149,16 @@
 }
 
 .btn-primary:hover {
-  background-color: #4f837f;
+  background-color: #2B8DBD;
 }
 
 .btn-primary:focus {
-  background-color: #4f837f;
+  background-color: #2B8DBD;
   color: white;
 }
 
 .btn-primary:active {
-  background-color: #467370 !important;
+  background-color: #2886B4 !important;
 }
 
 .about-section {
@@ -276,7 +276,7 @@ a {
 
 a:focus, a:hover {
   text-decoration: none;
-  color: #3c6360;
+  color: #2886B4;
 }
 
 .bg-black {

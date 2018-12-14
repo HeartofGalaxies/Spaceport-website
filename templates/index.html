@@ -151,7 +151,7 @@
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Enter your HoloNet ID below to receive sales and updates on our upcoming tech</h2>
 
-            <form class="form-inline d-flex">
+            <form action="{{ url_for('subscribe')}}" method="POST" class="form-inline d-flex">
               <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Name-User-ID">
               <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
             </form>
