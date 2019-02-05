@@ -8,19 +8,38 @@ def main():
 if __name__ == '__main__':
     app.run()
 
-@app.route('/subscribe', methods=['POST'])
+@app.route('/spaceport/translated', methods=['GET'])
+def translategb():
+    return render_template("translated.html")
+
+@app.route('/spaceport/subscribe', methods=['POST'])
 def subscribe():
-    inputEmail = request.form.get('inputEmail')
-    if "@" in inputEmail:
+    emailName = request.form.get('emailName')
+    if "@" in emailName:
         return render_template("email_error.html")
+    elif emailName == 'SpacePort-FTL-72908':
+        return render_template("authorization_error.html")
+    elif emailName == '':
+        return render_template("empty_field.html")
+    elif "+" in emailName:
+        return render_template("teleport_error.html")
     else:
         return render_template("net_error.html")
 
-"""@app.route('/process_inputs', methods=['POST'])
-def process_inputs():
-    name = request.form.get('input_name', '')
-    dropdown = request.form.get('input_dropdown', '')
-    select = request.form.get('input_select', '')
-    freeform = request.form.get('input_freeform', '')
-    return render_template("main_page.html", input_data=dropdown,
-                           output="You're a wizard %s." % name)"""
+@app.route('/spaceport/tsubscribe', methods=['POST'])
+def tsubscribe():
+    emailNamet = request.form.get('emailNamet')
+    if "@" in emailNamet:
+        return render_template("email_error_t.html")
+    elif emailNamet == 'SpacePort-FTL-72908':
+        return render_template("authorization_error_t.html")
+    elif emailNamet == '':
+        return render_template("empty_field_t.html")
+    elif "+" in emailNamet:
+        return render_template("teleport_error_t.html")
+    else:
+        return render_template("net_error_t.html")
+
+@app.route('/portal', methods=['GET'])
+def portalsite():
+    return render_template("portal_home.html")

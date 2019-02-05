@@ -38,7 +38,10 @@
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
           <h1 class="mx-auto my-0 text-uppercase"> ERROR</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">Invalid email domain. Make sure you’re using an intergalactic or universal email instead of a global email!</h2>
+          <form action="{{ url_for('translategb')}}" method="GET" class="form-inline d-flex">
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Sorry, but we do not currently offer independent teleportation services. Please visit your nearest teleporter or go to
+            <a href="/portal">www.portal.com</a> to schedule a trip.</h2>
+          </form>
           <button id="retry" type="retry" class="btn btn-primary mx-auto" onclick="goBack()">Try again</button>
         </div>
       </div>
