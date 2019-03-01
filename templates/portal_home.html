@@ -5,26 +5,39 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Portal: The best teleportation service in the solar system">
+    <meta name="description" content="Teleportation company">
     <meta name="author" content="Kayleigh Roberts">
 
     <title>Portal</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../static/vendor/bootstrap/css/portalbootstrap.min.css" rel="stylesheet">
+    <link href="../static/static_p/vendor_p/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="../static/vendor/fontawesome-free/css/portalfont.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/static_p/vendor_p/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- Plugin CSS -->
-    <link href="../static/vendor/popup/portalpop.css" rel="stylesheet" type="text/css">
+    <link href="../static/static_p/vendor_p/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="../static/css/portalsite.css" rel="stylesheet">
+    <link href="../static/static_p/css_p/freelancer.css" rel="stylesheet">
 
   </head>
+
+  <script>
+    function init() {
+      var imgDefer = document.getElementsByTagName('img');
+      for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute('data-src')) {
+          imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+        }
+      }
+    }
+
+    window.onload = init;
+  </script>
 
   <body id="page-top">
 
@@ -39,10 +52,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Glitches</a>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#holonet">HoloNet ID</a>
             </li>
@@ -57,7 +70,7 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="../static/img/glowyball.gif" alt="magic glowy ball portal thingy">
+        <img class="img-fluid mb-5 d-block mx-auto" src="../static/static_p/img_p/glowyball.gif" alt="magic glowy ball portal thingy">
         <h1 class="text-uppercase mb-0">Portal</h1>
         <hr class="star-dark mb-5">
         <h2 class="font-weight-light mb-0">Fast and reliable service since Star Date 3891</h2>
@@ -74,16 +87,16 @@
             <p class="lead">Portal can take you anywhere within a 2420 km radius, or 1945 clicks. We have the longest range, the fastest travel time, and the best service. Splinching and dislocation are compensated.</p>
           </div>
           <div class="col-lg-4 mr-auto text-secondary">
-            <p class="lead">Regretfully, we are not capable of inteplanetary teleportation as of yet, so we recommend teleporting up to a <a href="/spaceport">Spaceport</a> Station and taking a shuttle to your destination.</p>
+            <p class="lead">Regretfully, we are not capable of inteplanetary teleportation as of yet, so we recommend teleporting up to a <a href="/">Spaceport</a> Station and taking a shuttle to your destination.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Grid Section -->
+    <!-- Glitches Section -->
     <section class="portfolio bg-tertiary" id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0">Glitches</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-md-6 col-lg-4">
@@ -93,7 +106,7 @@
                   <p>Splinching</p>
                 </div>
               </div>
-              <img class="img-fluid" src="../static/img/splinched-shoes.jpg" alt="Splinching">
+              <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="../static/static_p/img_p/s2b.gif" alt="Splinching">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -103,7 +116,7 @@
                   <p>Dislocation</p>
                 </div>
               </div>
-              <img class="img-fluid" src="../static/img/disdogg.jpg" alt="Dislocation">
+              <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="./static/static_p/img_p/s1b.gif" alt="Dislocation">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
@@ -113,7 +126,7 @@
                   <p>Wrong Destination</p>
                 </div>
               </div>
-              <img class="img-fluid" src="../static/img/pulsar-space.jpg" alt="Wrong Destination">
+              <img class="img-fluid" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="./static/static_p/img_p/s3b.gif" alt="Wrong Destination">
             </a>
           </div>
         </div>
@@ -134,7 +147,7 @@
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary">Address</h2>
         <hr class="star-dark mb-5">
-        <p class="text-center text-secondary">Portal Inc.<br>329 Tewkesbury Ln, Alnitak Lvl 2<br>Mars, Sol, Milky Way<br>2918403<br>+5 430EN6Q</p>
+        <p class="text-center text-secondary">Portal Inc.<br>329 Tewkesbury Ln, Alnitak Lvl 2<br>Mars, Sol, Milky Way<br>2918403<br>+5 430EN6Q<a class="text-tertiary">...</a></p>
       </div>
     </section>
 
@@ -217,10 +230,10 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Splinching</h2>
+              <h2 class="text-primary text-uppercase mb-0">Splinching</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="../static/img/splinched-shoes.jpg" alt="Splinching">
-              <p class="mb-5">Splinching, or having objects or body parts left behind, is extremely rare. Nevertheless, we compensate for the lost item or teleport it in an additional trip for no charge.</p>
+              <img class="img-fluid mb-5" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="./static/static_p/img_p/g2b.gif" alt="Splinching">
+              <p class="text-secondary mb-5">Splinching, or having objects or body parts left behind, is extremely rare. Nevertheless, we compensate for the lost item or teleport it in an additional trip for no charge. We also offer complementary prosthetics, courtesy of Bionics Inc..</p>
             </div>
           </div>
         </div>
@@ -236,10 +249,10 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Dislocation</h2>
+              <h2 class="text-primary text-uppercase mb-0">Dislocation</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="../static/img/disdog.jpg" alt="Dislocation">
-              <p class="mb-5">Dislocation def</p>
+              <img class="img-fluid mb-5" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="./static/static_p/img_p/g1b.gif" alt="Dislocation">
+              <p class="text-secondary mb-5">Dislocation occurs when an object does not maintain its proper position throughout the teleportation process, and instead migrates away from its original position or disconnects from its host entirely. To have this fixed free of charge, simply visit the nearest Portal custumer service station and wait for relocation.</p>
             </div>
           </div>
         </div>
@@ -255,10 +268,10 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Luggage Inspection</h2>
+              <h2 class="text-primary text-uppercase mb-0">Wrong Destination</h2>
               <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="../static/img/pulsar-space.jpg" alt="Wrong Destination">
-              <p class="mb-5">Wrong destination comp</p>
+              <img class="img-fluid mb-5" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="./static/static_p/img_p/g3b.gif" alt="Wrong Destination">
+              <p class="text-secondary mb-5">We are not responsible for incorrect entries, but if a proven glitch occurs, we can teleport you to your true destination free of charge.<br>If the Portal station you were traveling to experiences an error while you were in transit, you will be relocated to the nearest station, and alternate transportation will be provided.</p>
             </div>
           </div>
         </div>
@@ -266,19 +279,19 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../static/vendor/portal.jquery/jquery.min.js"></script>
-    <script src="../static/vendor/bootstrap/js/portalbootstrap.bundle.min.js"></script>
+    <script src="../static/static_p/vendor_p/jquery/jquery.min.js"></script>
+    <script src="../static/static_p/vendor_p/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="../static/vendor/jquery-easing/portaljquery.easing.min.js"></script>
-    <script src="../static/vendor/popup/portaljquery.popup.min.js"></script>
+    <script src="../static/static_p/vendor_p/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../static/static_p/vendor_p/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="../static/js/jqBootstrapValidation.js"></script>
-    <script src="../static/js/contact_me.js"></script>
+    <script src="../static/static_p/js_p/jqBootstrapValidation.js"></script>
+    <script src="../static/static_p/js_p/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="../static/js/portalsite.js"></script>
+    <script src="../static/static_p/js_p/freelancer.min.js"></script>
 
   </body>
 
