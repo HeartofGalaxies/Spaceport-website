@@ -367,6 +367,10 @@ a:focus, a:hover, a:active {
   color: #000000 !important;
 }
 
+.text-unimportant {
+  color: #969696;
+}
+
 .btn-primary {
   background: linear-gradient(to top right,#475a6d,#524e42) !important;
   border-color: #524e42;
