@@ -8,12 +8,12 @@ def main():
 if __name__ == '__main__':
     app.run()
 
-@app.route('/spaceport/translated', methods=['GET'])
-def translategb():
+@app.route('/galactic', methods=['GET'])
+def translate():
     return render_template("translated.html")
 
-@app.route('/spaceport/subscribe', methods=['POST'])
-def subscribe():
+@app.route('/error', methods=['POST'])
+def error():
     emailName = request.form.get('emailName')
     if "@" in emailName:
         return render_template("email_error.html")
@@ -26,8 +26,8 @@ def subscribe():
     else:
         return render_template("net_error.html")
 
-@app.route('/spaceport/tsubscribe', methods=['POST'])
-def tsubscribe():
+@app.route('/galactic/error', methods=['POST'])
+def terror():
     emailNamet = request.form.get('emailNamet')
     if "@" in emailNamet:
         return render_template("email_error_t.html")
@@ -41,5 +41,9 @@ def tsubscribe():
         return render_template("net_error_t.html")
 
 @app.route('/portal', methods=['GET'])
-def portalsite():
+def portal():
     return render_template("portal_home.html")
+
+@app.route('/galactic/portal', methods=['GET'])
+def tportal():
+    return render_template("portal_home_t.html")

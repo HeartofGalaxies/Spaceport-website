@@ -169,6 +169,17 @@
   padding: 10rem 0;
 }
 
+@media (min-width: 992px) {
+  .projects-section .project-fake-text {
+    padding: 5rem;
+  }
+  .projects-section .project-fake-text hr {
+    border-color: #4F94CD;
+    border-width: .25rem;
+    width: 30%;
+  }
+}
+
 .projects-section .featured-text {
   padding: 2rem;
 }
@@ -221,8 +232,9 @@
 }
 
 .contact-section .card {
+  background-color: #161a1d;
   border: 0;
-  border-bottom: 0.25rem solid #4F94CD;
+  border-bottom: 0.25rem solid #17334a;
 }
 
 .contact-section .card h4 {
@@ -290,6 +302,10 @@ a:focus, a:hover {
   background-color: #4F94CD !important;
 }
 
+.text-card {
+  color: #4F94CD
+}
+
 .text-primary {
   color: #4F94CD !important;
 }
@@ -300,6 +316,10 @@ a:focus, a:hover {
 
 .bottom-margin-17 {
   padding-bottom:17px;
+}
+
+.top-margin-17 {
+  padding-top:17px;
 }
 
 footer {
