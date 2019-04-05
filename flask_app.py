@@ -12,6 +12,14 @@ if __name__ == '__main__':
 def translate():
     return render_template("translated.html")
 
+@app.route('/starship', methods=['GET'])
+def starship():
+    return render_template("inputID.html")
+
+@app.route('/galactic/starship', methods=['GET'])
+def translate_starship():
+    return render_template("inputID_t.html")
+
 @app.route('/error', methods=['POST'])
 def error():
     emailName = request.form.get('emailName')
@@ -19,6 +27,8 @@ def error():
         return render_template("email_error.html")
     elif emailName == 'SpacePort-FTL-72908':
         return render_template("authorization_error.html")
+    elif emailName == 'Portal-Teleport-7SK294E':
+        return render_template("authorization_error_portal.html")
     elif emailName == '':
         return render_template("empty_field.html")
     elif "+" in emailName:
@@ -31,7 +41,7 @@ def terror():
     emailNamet = request.form.get('emailNamet')
     if "@" in emailNamet:
         return render_template("email_error_t.html")
-    elif emailNamet == 'SpacePort-FTL-72908':
+    elif emailNamet == 'SpacePort-FTL-72908' or 'Portal-Teleport-7SK294E':
         return render_template("authorization_error_t.html")
     elif emailNamet == '':
         return render_template("empty_field_t.html")

@@ -69,7 +69,7 @@
     color: #4F94CD;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #3d6f98;
   }
   #mainNav.navbar-shrink .nav-link.active {
     color: #4F94CD;
@@ -144,16 +144,16 @@
 }
 
 .btn-primary:hover {
-  background-color: #4f837f;
+  background-color: #3d6f98;
 }
 
 .btn-primary:focus {
-  background-color: #4f837f;
+  background-color: #3d6f98;
   color: white;
 }
 
 .btn-primary:active {
-  background-color: #467370 !important;
+  background-color: #0058a0 !important;
 }
 
 .about-section {
@@ -207,6 +207,17 @@
   }
 }
 
+@media (min-width: 992px) {
+  .fake-projects-section .project-text {}
+}
+
+@media (min-width: 992px) {
+  .fake-projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #4F94CD;
+  }
+}
+
 .signup-section {
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
@@ -232,7 +243,7 @@
 }
 
 .contact-section .card {
-  background-color: #161a1d;
+  background-color: #1d1d1d;
   border: 0;
   border-bottom: 0.25rem solid #17334a;
 }
@@ -245,7 +256,7 @@
 }
 
 .contact-section .card hr {
-  border-color: #4F94CD;
+  border-color: #4579a2;
   border-width: 0.25rem;
   width: 3rem;
 }
@@ -298,12 +309,20 @@ a:focus, a:hover {
   background-color: #1d1d1d !important;
 }
 
+.bg-title-grey {
+  background-color: #161616 !important;
+}
+
 .bg-primary {
   background-color: #4F94CD !important;
 }
 
 .text-card {
-  color: #4F94CD
+  color: #4f8fc3
+}
+
+.text-card-white {
+  color: #bfbfbf
 }
 
 .text-primary {
