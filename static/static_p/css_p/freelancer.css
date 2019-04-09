@@ -233,7 +233,6 @@ header.masthead h2 {
 .portfolio-modal .portfolio-modal-dialog {
   padding: 3rem 1rem;
   min-height: calc(100vh - 2rem);
-  margin: 1rem calc(1rem - 8px);
   position: relative;
   z-index: 2;
   -moz-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.72);
@@ -243,7 +242,6 @@ header.masthead h2 {
 
 .portfolio-modal .portfolio-modal-dialog .close-button {
   position: absolute;
-  top: 2rem;
   right: 2rem;
 }
 
@@ -258,8 +256,6 @@ header.masthead h2 {
 @media (min-width: 768px) {
   .portfolio-modal .portfolio-modal-dialog {
     min-height: 100vh;
-    padding: 5rem;
-    margin: 3rem calc(3rem - 8px);
   }
   .portfolio-modal .portfolio-modal-dialog h2 {
     font-size: 3rem;
@@ -331,12 +327,36 @@ form .row:first-child .floating-label-form-group {
   background-color: #000000;
 }
 
-a {
+.parallax {
+  background-image: url("../static/static_p/img_p/soundwave.gif");
+  background-color: #000;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.txtright {
+  text-align: right;
+}
+@media only screen and (min-width: 0px) and (max-width: 991px) {
+  .txtright {
+    text-align: left !important;
+  }
+}
+
+a, a:focus {
   color: #4F94CD;
 }
 
-a:focus, a:hover, a:active {
-  color: #2886B4;
+a:hover {
+  text-decoration: none;
+  color: #1d81c5;
+}
+
+a:active {
+  color: #3d6f98
 }
 
 .btn {
@@ -389,4 +409,26 @@ a:focus, a:hover, a:active {
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
   background-color: #1a252f;
   border-color: #1a252f;
+}
+
+.txtright {
+  text-align: right;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .txtright {
+    text-align: left;
+  }
+}
+
+.margtop {
+  padding-top: 135px;
+}
+
+.margbot {
+  padding-bottom: 500px;
+}
+
+.margmid {
+  padding: 150px;
 }

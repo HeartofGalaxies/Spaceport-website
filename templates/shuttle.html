@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A company website for SpacePort.">
+    <meta name="author" content="Kayleigh Roberts">
+    <meta name="theme-color" content="#4F94CD">
+    <fun 7abbde></fun>
+    <title>SpacePort</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/grayscale.css" rel="stylesheet">
+
+    <link rel="preload" href="../static/css/grayscale.css" as="style">
+    <link rel="preload" href="../static/js/grayscale.js" as="script">
+
+  </head>
+
+  <script>
+    function switchtxtrent() {
+      document.getElementById("switchtxt").innerHTML = "Enter your HoloNet ID below to rent a Shuttle for ร500 a day";
+    }
+    function switchtxtbuy() {
+      document.getElementById("switchtxt").innerHTML = "Enter your HoloNet ID below to buy your Shuttle for ร14.999";
+    }
+  </script>
+
+  <script>
+    function init() {
+      var imgDefer = document.getElementsByTagName('img');
+      for (var i = 0; i < imgDefer.length; i++) {
+        if (imgDefer[i].getAttribute('data-src')) {
+          imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+        }
+      }
+    }
+
+    window.onload = init;
+  </script>
+
+  <body id="page-top" class="bg-transition">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="nav-link nav-link js-scroll-trigger" href="/galactic/shuttle">Galactic Basic (๓ຟฯєץ໓ӄภຖς)</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Home
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="/"><h5><strong>Home</strong></h5></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead mastheadfake">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <section id="projects" class="fake-projects-section">
+              <div class="container">
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                  <div class="col-xl-8 col-lg-7">
+                    <img class="img-fluid mb-3 mb-lg-0" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="./static/img/sleek-skyjet-shuttle.jpg" alt="shuttle">
+                  </div>
+                  <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text project-fake-text text-center text-lg-left">
+                      <h4 class="text-white">Shuttle</h4>
+                      <p class="text-white-50 bottom-margin-17 mb-0">Travel to the other side of the galaxy in under a day with cutting edge FTL engines. Equipped for overnight flights.</p>
+                      <h5 class="text-white-50">ร14.999 to buy</h5></h5>
+                      <h5 class="text-white-50 bottom-margin-17">ร500 per day</h5>
+                      <a onclick="switchtxtrent()" href="#signup" class="btn btn-primary right-margin-17 js-scroll-trigger">Rent</a>
+                      <a onclick="switchtxtbuy()" href="#signup" class="btn btn-primary js-scroll-trigger">Buy</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+        </div>
+      </div>
+    </header>
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 id="switchtxt" class="text-white mb-5">Enter your HoloNet ID below to complete your purchase</h2>
+
+            <form action="{{ url_for('error')}}" method="POST" class="form-inline d-flex">
+              <input type="emailName" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="emailName" name="emailName" placeholder="Name-User-ID"><br>
+              <button id="submitSubscribe" type="submit" class="btn btn-primary right-margin-17 mx-auto">Continue</button>
+            </form>
+            <p></p>
+            <p class="mb-0 text-white-50">(If you're old fashioned, you can also enter your email: user@domain.suffix)</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; FTL Space Travel Inc. Star Date 4583
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/grayscale.min.js"></script>
+
+  </body>
+
+</html>

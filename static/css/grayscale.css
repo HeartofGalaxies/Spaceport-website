@@ -83,12 +83,19 @@
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+
+.mastheadreal {
+  padding: 15rem 0;
+}
+
+.mastheadfake {
+  padding: 7rem 0;
 }
 
 .masthead h1 {
@@ -137,6 +144,10 @@
   text-transform: uppercase;
   letter-spacing: .15rem;
   border: 0;
+}
+
+.vertical-btn {
+  margin-bottom: 5px;
 }
 
 .btn-primary {
@@ -199,6 +210,7 @@
 @media (min-width: 992px) {
   .projects-section .project-text {
     padding: 5rem;
+    font-size: 85%;
   }
   .projects-section .project-text hr {
     border-color: #4F94CD;
@@ -294,7 +306,11 @@ a {
 
 a:focus, a:hover {
   text-decoration: none;
-  color: #3c6360;
+  color: #1d81c5;
+}
+
+a:active {
+  color: #3d6f98
 }
 
 .bg-black {
@@ -335,6 +351,10 @@ a:focus, a:hover {
 
 .bottom-margin-17 {
   padding-bottom:17px;
+}
+
+.top-margin-7 {
+  padding-top:4px;
 }
 
 .top-margin-17 {

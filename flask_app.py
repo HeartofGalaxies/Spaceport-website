@@ -20,6 +20,14 @@ def starship():
 def translate_starship():
     return render_template("inputID_t.html")
 
+@app.route('/shuttle', methods=['GET'])
+def shuttle():
+    return render_template("shuttle.html")
+
+@app.route('/galactic/shuttle', methods=['GET'])
+def translate_shuttle():
+    return render_template("shuttle_t.html")
+
 @app.route('/error', methods=['POST'])
 def error():
     emailName = request.form.get('emailName')

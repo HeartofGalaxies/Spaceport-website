@@ -24,20 +24,58 @@
     <!-- Custom styles for this template -->
     <link href="../static/static_p/css_p/freelancer.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   </head>
 
   <script>
+    $(document).ready(function(){
+      $("a.hqlinkswitch").mouseover(function(){
+        /*$(".enterchange span").text("Portal Headquarters\n329 Cautley Castle Ln\nTerilentak Lvl 2, Mars\nSol, Milky Way\n2918403");*/
+        document.getElementById("switchtxt").innerHTML = "<span>Portal Headquarters<br>329 Cautley Castle Ln<br>Terilentak Lvl 2, Mars<br>Sol, Milky Way<br>2918403</span>";
+      });
+    });
+    $(document).ready(function(){
+      $("a.cuslinkswitch").mouseover(function(){
+        /*$(".enterchange span").text("Portal Customer Service\n4792 Tewkesbury Ave\nNew York Lvl 13, Earth\nSol, Milky Way\n7190392");*/
+        document.getElementById("switchtxt").innerHTML = "<span>Portal Customer Service<br>4792 Tewkesbury Ave<br>New York Lvl 13, Earth<br>Sol, Milky Way<br>7190392</span>";
+      });
+    });
+    $(document).ready(function(){
+      $("a.spalinkswitch").mouseover(function(){
+        /*$(".enterchange span").text("SpacePort Shuttle Station\nDock 27, Lvl 7A\nISS, Earth Orbit\nSol, Milky Way\n9871023");*/
+        document.getElementById("switchtxt").innerHTML = "<span>SpacePort Shuttle Station<br>Dock 27, Lvl 7A<br>ISS, Earth Orbit<br>Sol, Milky Way<br>9871023</span>";
+      });
+    });
     function switchtxthq() {
-      document.getElementById("switchtxt").innerHTML = "Portal Inc.<br>329 Tewkesbury Ln<br>Terilentak Lvl 2, Mars<br>Sol, Milky Way<br>2918403";
+      document.getElementById("switchtxt").innerHTML = "<span>Portal Headquarters<br>329 Cautley Castle Ln<br>Terilentak Lvl 2, Mars<br>Sol, Milky Way<br>2918403</span>";
     }
     function switchtxtcustomer() {
-      document.getElementById("switchtxt").innerHTML = "Portal Customer Service<br>4792 Cautley Ave<br>New York Lvl 13, Earth<br>Sol, Milky Way<br>7190392";
+      document.getElementById("switchtxt").innerHTML = "<span>Portal Customer Service<br>4792 Tewkesbury Ave<br>New York Lvl 13, Earth<br>Sol, Milky Way<br>7190392</span>";
     }
     function switchtxtspaceport() {
-      document.getElementById("switchtxt").innerHTML = "SpacePort Shuttle Station<br>Dock 27, Lvl 7A<br>ISS, Earth Orbit<br>Sol, Milky Way<br>9871023";
+      document.getElementById("switchtxt").innerHTML = "<span>SpacePort Shuttle Station<br>Dock 27, Lvl 7A<br>ISS, Earth Orbit<br>Sol, Milky Way<br>9871023</span>";
     }
   </script>
 
+  <style>
+    .parallax {
+      background-image: url("../static/static_p/img_p/sparkle.gif");
+      background-color: #000;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .parallaxcircle {
+      background-image: url("../static/static_p/img_p/particle.gif");
+      background-color: #000;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
 
   <script>
     function init() {
@@ -51,61 +89,6 @@
 
     window.onload = init;
   </script>
-
-  <style>
-    .parallax {
-      background-image: url("../static/static_p/img_p/soundwave.gif");
-      background-color: #000;
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .parallaxwave {
-      background-image: url("../static/static_p/img_p/bluewave.gif");
-      background-color: #000;
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .parallaxcircle {
-      background-image: url("../static/static_p/img_p/particle.gif");
-      background-color: #000;
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .parallaxsparkle {
-      background-image: url("../static/static_p/img_p/sparkle.gif");
-      background-color: #000;
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-    @media only screen and (max-device-width: 1366px) {
-      .parallax {
-        background-attachment: scroll;
-      }
-    }
-    .margtop {
-      padding-top: 107px;
-    }
-    .margbot {
-      padding-bottom: 500px;
-    }
-    .margmid {
-      padding: 150px;
-    }
-
-  </style>
 
   <body id="page-top" class="parallax">
 
@@ -161,10 +144,6 @@
       </div>
     </section>
 
-    <!-- Parallax Section -->
-    <section class="parallaxcircle margmid">
-    </section>
-
     <!-- Glitches Section -->
     <section class="portfolio bg-tertiary" id="portfolio">
       <div class="container">
@@ -205,32 +184,24 @@
       </div>
     </section>
 
-    <!-- Parallax Section -->
-    <section class="parallaxsparkle margmid">
-    </section>
-
     <!-- Contact Section -->
     <section class="bg-primary text-primary mb-0" id="contact">
       <div class="container">
         <h2 class="text-center text-uppercase text-primary">Contact</h2>
         <hr class="star-light mb-5">
         <div class="row">
-          <div class="col-lg-4 ml-auto text-secondary">
-            <p class="lead" align="right">
-              <a href="#contact" onclick="switchtxthq()">Portal Factory Hq: +4 430EN6K</a><br>
-              <a href="#contact" onclick="switchtxtcustomer()">Customer Service: +3 507H48Y</a><br>
-              <a href="#contact" onclick="switchtxtspaceport()">SpacePort Station: +3 E34U1H4</a></p>
-            <p class="lead" align="right">HoloNet ID: Portal-111-7SK294E</p>
+          <div class="col-lg-4 ml-auto text-secondary enterchange">
+            <p class="lead txtright">
+              <a class="hqlinkswitch" href="#address" id="hqlinkswitch" onclick="switchtxthq()">Portal Factory Hq: +4 430EN6K</a><br>
+              <a class="cuslinkswitch" href="#address" id="cuslinkswitch" onclick="switchtxtcustomer()">Customer Service: +3 507H48Y</a><br>
+              <a class="spalinkswitch" href="#address" id="spalinkswitch" onclick="switchtxtspaceport()">SpacePort Station: +3 E34U1H4</a></p>
+            <p class="lead txtright">HoloNet ID: Portal-111-7SK294E</p>
           </div>
-          <div class="col-lg-4 mr-auto text-secondary">
-            <p id="switchtxt" class="lead">Portal Inc.<br>329 Tewkesbury Ln<br>Terilentak Lvl 2, Mars<br>Sol, Milky Way<br>2918403</p>
+          <div class="col-lg-4 mr-auto text-secondary enterchange">
+            <p id="switchtxt" class="lead"><span>Portal Headquarters<br>329 Cautley Castle Ln<br>Terilentak Lvl 2, Mars<br>Sol, Milky Way<br>2918403</span></p>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Parallax Section -->
-    <section class="parallaxwave margmid">
     </section>
 
     <!-- Schedule Section -->
@@ -314,7 +285,7 @@
     <!-- Portfolio Modals -->
 
     <!-- Splinching Modal -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+    <div class="portfolio-modal portfolio-modal-dismiss mfp-hide" id="portfolio-modal-1">
       <div class="portfolio-modal-dialog bg_modal">
         <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
           <i class="fa fa-3x fa-times"></i>
@@ -333,7 +304,7 @@
     </div>
 
     <!-- Picasso Modal -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
+    <div class="portfolio-modal portfolio-modal-dismiss mfp-hide" id="portfolio-modal-2">
       <div class="portfolio-modal-dialog bg_modal">
         <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
           <i class="fa fa-3x fa-times"></i>
@@ -352,7 +323,7 @@
     </div>
 
     <!-- 404 Modal -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
+    <div class="portfolio-modal portfolio-modal-dismiss mfp-hide" id="portfolio-modal-3">
       <div class="portfolio-modal-dialog bg_modal">
         <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
           <i class="fa fa-3x fa-times"></i>
