@@ -294,6 +294,11 @@
   color: #fff;
 }
 
+.clearformathead {
+  clear:none !important;
+  display:inline !important;
+}
+
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
@@ -352,12 +357,28 @@ a:active {
   padding-bottom:17px;
 }
 
+.bottom-margin-7 {
+  padding-bottom:7px;
+}
+
 .top-margin-7 {
   padding-top:4px;
 }
 
 .top-margin-17 {
   padding-top:17px;
+}
+
+.right-margin-17 {
+  padding-right:17px;
+}
+
+.center-everything {
+  display: flex;
+  align-items: center !important;
+  text-align: center !important;
+  justify-content: center !important;
+  margin: auto !important;
 }
 
 footer {

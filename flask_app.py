@@ -14,11 +14,11 @@ def translate():
 
 @app.route('/starship', methods=['GET'])
 def starship():
-    return render_template("inputID.html")
+    return render_template("starship.html")
 
 @app.route('/galactic/starship', methods=['GET'])
 def translate_starship():
-    return render_template("inputID_t.html")
+    return render_template("starship_t.html")
 
 @app.route('/shuttle', methods=['GET'])
 def shuttle():
@@ -27,6 +27,14 @@ def shuttle():
 @app.route('/galactic/shuttle', methods=['GET'])
 def translate_shuttle():
     return render_template("shuttle_t.html")
+
+@app.route('/cruise', methods=['GET'])
+def cruise():
+    return render_template("cruise.html")
+
+@app.route('/galactic/cruise', methods=['GET'])
+def translate_cruise():
+    return render_template("cruise_t.html")
 
 @app.route('/error', methods=['POST'])
 def error():
@@ -65,3 +73,7 @@ def portal():
 @app.route('/galactic/portal', methods=['GET'])
 def tportal():
     return render_template("portal_home_t.html")
+
+@app.route('/adventure', methods=['GET'])
+def adventure():
+    return render_template("adventure.html")
