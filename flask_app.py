@@ -1,3 +1,4 @@
+import subprocess
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
@@ -31,6 +32,10 @@ def translate_shuttle():
 @app.route('/cruise', methods=['GET'])
 def cruise():
     return render_template("cruise.html")
+
+@app.route('/cruise/departures', methods=['GET'])
+def cruise_departures():
+    return render_template("cruise_departures.html")
 
 @app.route('/galactic/cruise', methods=['GET'])
 def translate_cruise():

@@ -373,6 +373,10 @@ a:active {
   padding-right:17px;
 }
 
+.left-margin-17 {
+  padding-left:17px;
+}
+
 .center-everything {
   display: flex;
   align-items: center !important;

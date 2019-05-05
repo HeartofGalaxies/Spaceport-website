@@ -17,15 +17,16 @@ $(function() {
       if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
       }
-      $this = $("#sendMessageButton");
+      $this = $("#submitSubscribe");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "././mail/contact_me.php",
+        url: "./email/email.php",
         type: "POST",
         data: {
           name: name,
-          phone: phone,
-          email: email,
+          email: holo,
+          destination: destination,
+          date: date,
           message: message
         },
         cache: false,

@@ -28,34 +28,11 @@
   </head>
 
   <script>
-    function switchtxtdays() {
-      document.getElementById("switchbtn").innerHTML = "Buy for ร100";
-      document.getElementById("switchtxtlength").innerHTML = "Enter your HoloNet ID below to purchase a 3 day cruise";
-      document.getElementById("switchtxtprice").innerHTML = " for ร100";
-    }
-    function switchtxtweek() {
-      document.getElementById("switchbtn").innerHTML = "Buy for ร200";
-      document.getElementById("switchtxtlength").innerHTML = "Enter your HoloNet ID below to purchase a 1 week cruise";
-      document.getElementById("switchtxtprice").innerHTML = " for ร200";
-    }
-    function switchtxtweeks() {
-      document.getElementById("switchbtn").innerHTML = "Buy for ร500";
-      document.getElementById("switchtxtlength").innerHTML = "Enter your HoloNet ID below to purchase a 2 week cruise";
-      document.getElementById("switchtxtprice").innerHTML = " for ร500";
-    }
-    function switchtxtmonth() {
-      document.getElementById("switchbtn").innerHTML = "Buy for ร1000";
-      document.getElementById("switchtxtlength").innerHTML = "Enter your HoloNet ID below to purchase a 1 month cruise";
-      document.getElementById("switchtxtprice").innerHTML = " for ร1000";
-    }
-    function switchtxtvega() {
-      document.getElementById("switchtxtdestination").innerHTML = " to Vega";
-    }
-    function switchtxtdenebola() {
+    function switchtxt1() {
+      document.getElementById("switchbtn").innerHTML = "Buy for ร250";
+      document.getElementById("switchtxtlength").innerHTML = "Enter your HoloNet ID below to purchase a last minute 2 week cruise";
       document.getElementById("switchtxtdestination").innerHTML = " to Denebola";
-    }
-    function switchtxtaldebaran() {
-      document.getElementById("switchtxtdestination").innerHTML = " to Aldebaran";
+      document.getElementById("switchtxtprice").innerHTML = " for ร250";
     }
   </script>
 
@@ -70,6 +47,59 @@
     }
 
     window.onload = init;
+  </script>
+
+  <script>
+    (function ticksetup() {
+      var depart = new Date;
+
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      var current = new Date;
+      var currenthour = current.getHours();
+      var currentminute = current.getMinutes();
+      randhour = getRandomInt(parseInt(currenthour), 23)
+      if (randhour == currenthour) {randmin = getRandomInt(parseInt(currentminute), 59)}
+      else {randmin = getRandomInt(10, 59)}
+      if (randhour >= 12) {meridiem = "pm"}
+      else {meridiem = "am"}
+      depart.setHours(randhour, randmin, 00);
+
+      function pad(num) {
+        return ("0" + parseInt(num)).substr(-2);
+      }
+
+      function tick() {
+        var now = new Date;
+        if (now > depart) {
+          var elapsed = now - depart;
+          var hours = Math.floor((elapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
+
+          document.getElementById('departcount1').innerHTML =
+            "departed " + hours + "h " + minutes + "m " + seconds + "s ago";
+          document.getElementById('departtime1').innerHTML = " at " + randhour + ":" + randmin + meridiem;
+          setTimeout(tick, 1000);
+        }
+        else {
+          var remaining = ((depart - now) / 1000);
+          var hours = Math.floor((remaining / 60 / 60) % 60);
+          var minutes = Math.floor((remaining / 60) % 60);
+          var seconds = Math.floor(remaining % 60);
+
+          document.getElementById('departcount1').innerHTML =
+            "departing in " + hours + "h " + minutes + "m " + seconds + "s ";
+          document.getElementById('departtime1').innerHTML = " at " + randhour + ":" + randmin + meridiem;
+          setTimeout(tick, 1000);
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', tick);
+    })();
   </script>
 
   <body id="page-top" class="bg-transition">
@@ -98,7 +128,7 @@
               <div class="container">
                 <div class="row center-everything no-gutters mb-4 mb-lg-5">
                   <div class="col-xl-8 col-lg-7">
-                    <img class="img-fluid mb-3 mb-lg-0" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="./static/img/spiky-cruise.jpg" alt="cruise">
+                    <img class="img-fluid mb-3 mb-lg-0" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="../static/img/spiky-cruise.jpg" alt="cruise">
                   </div>
                 </div>
               </div>
@@ -109,18 +139,11 @@
                   <div class="col-8">
                     <div class="featured-text">
                       <br><br>
-                      <h4 class="text-white">Cruise</h4>
-                      <p class="text-white-50 bottom-margin-17 right-margin-17 mb-0">Book today and enjoy a month long cruise equipped with everything you can imagine. Marvel at the vast wonders of space, rub shoulders with the elite, and meet aliens from Alpha Centauri and beyond.</p>
-                      <a class="bottom-margin-17 right-margin-17 mb-0" onClick="switchtxtdays()" href="#purchase">3 days</a>
-                      <a class="bottom-margin-17 right-margin-17 mb-0" onClick="switchtxtweek()" href="#purchase">1 week</a>
-                      <a class="bottom-margin-17 right-margin-17 mb-0" onClick="switchtxtweeks()" href="#purchase">2 weeks</a>
-                      <a class="bottom-margin-17 mb-0" onClick="switchtxtmonth()" href="#purchase">1 month</a>
+                      <h4 class="text-white">Current Departures</h4>
                       <br>
-                      <a class="top-margin-17 bottom-margin-17 right-margin-17 mb-0" onClick="switchtxtaldebaran()" href="#purchase">Aldebaran</a>
-                      <a class="top-margin-17 bottom-margin-17 right-margin-17 mb-0" onClick="switchtxtvega()" href="#purchase">Vega</a>
-                      <a class="top-margin-17 bottom-margin-17 mb-0" onClick="switchtxtdenebola()" href="#purchase">Denebola</a>
-                      <br><br>
-                      <p class="text-white-50 bottom-margin-17 right-margin-17 mb-0">Look at <a href="/cruise/departures">current departures</a> instead.</p>
+                      <div class="text-white-50 bottom-margin-17 right-margin-17 mb-0 clearformathead">
+                        <p style="display:inline;">2 week cruise to Denebola <p style="display:inline;" id="departcount1"></p><p style="display:inline;" id="departtime1"></p><a class="left-margin-17" style="display:inline;" onClick="switchtxt1()" href="#purchase">Buy for ร250</a></p>
+                      </div>
                       <br>
                       <a id="switchbtn" href="#signup" class="btn btn-primary js-scroll-trigger">Buy</a>
                     </div>
