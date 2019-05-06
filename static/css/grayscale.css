@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Grayscale v5.0.1 (https://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
- */
 #mainNav {
   min-height: 56px;
   background-color: #fff;
@@ -11,8 +6,8 @@
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #4F94CD;
+  border: 1px solid #4F94CD;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -71,15 +66,15 @@
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #4F94CD;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #3d6f98;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #4F94CD;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #4F94CD;
   }
 }
 
@@ -88,12 +83,19 @@
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+
+.mastheadreal {
+  padding: 15rem 0;
+}
+
+.mastheadfake {
+  padding: 7rem 0;
 }
 
 .masthead h1 {
@@ -144,21 +146,25 @@
   border: 0;
 }
 
+.vertical-btn {
+  margin-bottom: 5px;
+}
+
 .btn-primary {
-  background-color: #64a19d;
+  background-color: #4F94CD;
 }
 
 .btn-primary:hover {
-  background-color: #4f837f;
+  background-color: #3d6f98 !important;
 }
 
 .btn-primary:focus {
-  background-color: #4f837f;
+  background-color: #4F94CD;
   color: white;
 }
 
 .btn-primary:active {
-  background-color: #467370 !important;
+  background-color: #0058a0 !important;
 }
 
 .about-section {
@@ -174,6 +180,17 @@
   padding: 10rem 0;
 }
 
+@media (min-width: 992px) {
+  .projects-section .project-fake-text {
+    padding: 5rem;
+  }
+  .projects-section .project-fake-text hr {
+    border-color: #4F94CD;
+    border-width: .25rem;
+    width: 30%;
+  }
+}
+
 .projects-section .featured-text {
   padding: 2rem;
 }
@@ -181,7 +198,7 @@
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid #4F94CD;
   }
 }
 
@@ -195,9 +212,20 @@
     padding: 5rem;
   }
   .projects-section .project-text hr {
-    border-color: #64a19d;
+    border-color: #4F94CD;
     border-width: .25rem;
     width: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .fake-projects-section .project-text {}
+}
+
+@media (min-width: 992px) {
+  .fake-projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #4F94CD;
   }
 }
 
@@ -226,8 +254,9 @@
 }
 
 .contact-section .card {
+  background-color: #1d1d1d;
   border: 0;
-  border-bottom: 0.25rem solid #64a19d;
+  border-bottom: 0.25rem solid #17334a;
 }
 
 .contact-section .card h4 {
@@ -238,7 +267,7 @@
 }
 
 .contact-section .card hr {
-  border-color: #64a19d;
+  border-color: #4579a2;
   border-width: 0.25rem;
   width: 3rem;
 }
@@ -265,30 +294,95 @@
   color: #fff;
 }
 
+.clearformathead {
+  clear:none !important;
+  display:inline !important;
+}
+
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
 }
 
 a {
-  color: #64a19d;
+  color: #4F94CD;
 }
 
 a:focus, a:hover {
   text-decoration: none;
-  color: #3c6360;
+  color: #1d81c5;
+}
+
+a:active {
+  color: #3d6f98
 }
 
 .bg-black {
   background-color: #161616 !important;
 }
 
+.bg-transition {
+  background: linear-gradient(to bottom, rgb(24, 24, 24), rgb(22, 22, 22), #161616 100%)
+}
+
+.bg-darkblack {
+  background-color: #1d1d1d !important;
+}
+
+.bg-title-grey {
+  background-color: #161616 !important;
+}
+
 .bg-primary {
-  background-color: #64a19d !important;
+  background-color: #4F94CD !important;
+}
+
+.text-card {
+  color: #4f8fc3
+}
+
+.text-card-white {
+  color: #bfbfbf
 }
 
 .text-primary {
-  color: #64a19d !important;
+  color: #4F94CD !important;
+}
+
+.bottom-margin-100 {
+  padding-bottom:100px;
+}
+
+.bottom-margin-17 {
+  padding-bottom:17px;
+}
+
+.bottom-margin-7 {
+  padding-bottom:7px;
+}
+
+.top-margin-7 {
+  padding-top:4px;
+}
+
+.top-margin-17 {
+  padding-top:17px;
+}
+
+.right-margin-17 {
+  padding-right:17px;
+}
+
+.left-margin-17 {
+  padding-left:17px;
+}
+
+.center-everything {
+  display: flex;
+  align-items: center !important;
+  text-align: center !important;
+  justify-content: center !important;
+  margin: auto !important;
 }
 
 footer {
